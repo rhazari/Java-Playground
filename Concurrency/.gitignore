@@ -1,5 +1,6 @@
 */bin/*
 bin/
+target/
 
 *.class
 
@@ -7,7 +8,6 @@ bin/
 *.jar
 *.war
 *.ear
-
 
 # Eclipse
 .settings/
