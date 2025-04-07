@@ -1,5 +1,6 @@
 package org.raihan.basics.Queue;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -12,6 +13,7 @@ public class QueueExample {
         numbers.offer(1);
         numbers.offer(2);
         numbers.offer(3);
+        numbers.offer(5);
         System.out.println("Queue: " + numbers);
 
         // Access elements of the Queue

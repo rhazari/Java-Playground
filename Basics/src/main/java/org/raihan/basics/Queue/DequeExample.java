@@ -2,6 +2,7 @@ package org.raihan.basics.Queue;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class DequeExample {
@@ -13,6 +14,8 @@ public class DequeExample {
         numbers.offer(1);
         numbers.offerLast(2);
         numbers.offerFirst(3);
+        numbers.offerFirst(4);
+        numbers.offerFirst(5);
         System.out.println("Deque: " + numbers);
 
         // Access elements of the Deque
@@ -29,7 +32,21 @@ public class DequeExample {
         int removedNumber2 = numbers.pollLast();
         System.out.println("Removed Last Element: " + removedNumber2);
 
-        // Stack implementation from Dequeu
+        // Iterator
+        Iterator<Integer> itr = numbers.iterator();
+        while(itr.hasNext()) {
+            System.out.print(itr.next());
+            System.out.print(" ");
+        }
+        System.out.println();
+        itr = numbers.descendingIterator();
+        while(itr.hasNext()) {
+            System.out.print(itr.next());
+            System.out.print(" ");
+        }
+        System.out.println();
+
+        // Stack implementation from Deque
         Deque<Integer> stack = new ArrayDeque<>();
 
         stack.push(1);
@@ -62,5 +79,7 @@ public class DequeExample {
         // remove the last element
         linkList.pollLast();
         System.out.println("LinkedList after removeLast(): " + linkList);
+
+        //Iterator<Integer> itr = linkList.descendingIterator()
     }
 }
